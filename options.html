@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RoTweet Fresh Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="logo">𝕏</div>
+      <div><h1>RoTweet Fresh</h1><p>Game-aware X feeds for Roblox. Version 1.1.1</p></div>
+    </header>
+    <section class="card note">
+      <h2>Automatic game detection is enabled</h2>
+      <p>RoTweet matches the Roblox game ID in the page URL to a built-in account preset. You don't need to configure anything for listed games. These are suggested game/developer accounts, not a guarantee of X verification. A custom handle below overrides a preset.</p>
+    </section>
+    <section class="card">
+      <h2>Game account mappings</h2>
+      <p class="muted">Edit a preset, add a game, or leave a handle as provided. Use the numeric Roblox game ID from its URL and the X username without the @.</p>
+      <div class="mapping-head"><span>Game</span><span>Roblox game ID</span><span>X username</span><span></span></div>
+      <div id="mappings"></div>
+      <div class="row-actions"><button id="addRow" class="secondary" type="button">+ Add custom game</button><button id="resetPresets" class="secondary" type="button">Restore built-in presets</button></div>
+      <div class="bottom"><span id="status" role="status">Loading settings…</span><button id="save" class="primary" type="button">Save settings</button></div>
+    </section>
+    <section class="card">
+      <h2>Default fallback account</h2>
+      <label for="defaultUser">Use only when the current game has no preset</label>
+      <input id="defaultUser" placeholder="e.g. Roblox_RTC">
+      <p class="muted small">The game-specific preset always takes priority unless you create a custom mapping for that game's ID.</p>
+    </section>
+    <section class="card note">
+      <h2>About the feed</h2>
+      <p>The extension uses an unofficial public profile reader and RSS mirrors. Providers can change or go offline; if that happens, the sidebar still links to the account on X. It does not inject X's blocked widgets.js script into Roblox.</p>
+    </section>
+  </main>
+  <script src="games.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

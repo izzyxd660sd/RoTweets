@@ -1,0 +1,28 @@
+NAME
+RoTweet Fresh - Roblox X Feed Sidebar
+
+SHORT DESCRIPTION
+See public X posts from popular Roblox game accounts in a compact sidebar on experience pages.
+
+DETAILED DESCRIPTION
+RoTweet Fresh adds a compact, minimizable feed beside Roblox experience pages. It recognizes supported games by their Roblox experience ID and selects a suggested X account automatically, so you do not need to enter the handle yourself. You can edit presets, add custom game mappings, and choose a fallback account.
+
+Features:
+- Curated game-to-account presets for popular Roblox experiences
+- Automatically selects an account from the Roblox experience URL
+- Compact sidebar with refresh, minimize, and direct profile/post links
+- Encapsulated Shadow DOM UI to keep extension styles separate from Roblox's page styles
+- Settings synced through Chrome storage
+- Graceful fallback when public feed providers are unavailable
+
+Important: public feed retrieval relies on unofficial third-party services and may be interrupted. RoTweet Fresh is not affiliated with Roblox or X. Suggested account mappings may refer to a game, studio, creator, or update account and do not imply verification.
+
+PERMISSIONS JUSTIFICATION
+- Storage: save the user's editable game-account mappings and default account.
+- Host access to x.pcstyle.dev and RSSHub mirrors: request public feed data for the selected X username.
+- Roblox experience pages: show the sidebar and identify the current experience from its URL.
+
+BEFORE SUBMISSION
+- Replace the contact placeholder by providing a real support email in the listing and privacy policy.
+- Host PRIVACY_POLICY.md at a stable public HTTPS URL and enter that URL in the Web Store dashboard.
+- Capture screenshots from a real Chrome installation and review all account mappings for accuracy.
